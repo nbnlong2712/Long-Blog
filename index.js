@@ -12,6 +12,10 @@ const path = require('path')
 const ejs = require('ejs')
 app.set('view engine', 'ejs')   //api thông báo với ejs rằng các file UI chuyển đuôi thành ejs (giống như trước đây đuôi handlebars)
 
+//mongoose
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/my_database', {useNewUrlParser: true})
+
 //2. Initialize public file to save images, videos,...
 app.use(express.static('public'))
 
